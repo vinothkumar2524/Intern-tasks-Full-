@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<welcome-file-list>
+		<welcome-file>Login.jsp</welcome-file>
+	</welcome-file-list>
+	<filter>
+		<filter-name>FilterOne</filter-name>
+		<filter-class>contact.datastore.FilterOne</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FilterOne</filter-name>
+		<url-pattern>/AddContacts</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>FilterOne</filter-name>
+		<url-pattern>/UpdateContact</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>FilterTwo</filter-name>
+		<filter-class>contact.datastore.FilterTwo</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FilterTwo</filter-name>
+		<url-pattern>/AddNumber</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>FilterTwo</filter-name>
+		<url-pattern>/DeleteNumber</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>FilterThree</filter-name>
+		<filter-class>contact.datastore.FilterThree</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FilterThree</filter-name>
+		<url-pattern>/UpdateNumber</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>SessionFilter</filter-name>
+		<filter-class>contact.datastore.SessionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/AddContacts</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/AddNumber</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/DeleteContact</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/DeleteNumber</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/LogoutServlet</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/SearchServlet</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/UpdateContact</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/UpdateNumber</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/ViewContact</url-pattern>
+	</filter-mapping>
+
+</web-app>
